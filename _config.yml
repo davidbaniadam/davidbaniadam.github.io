@@ -2,5 +2,5 @@
 markdown: kramdown
 
 # Permalinks
-permalink: /blog/:title/
+permalink: /:title/
 # permalink: /:year/:month/:day/:title/
