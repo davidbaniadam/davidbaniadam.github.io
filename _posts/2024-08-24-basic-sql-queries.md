@@ -13,3 +13,4 @@ The `SELECT` statement is used to fetch data from a database. Here's an example:
 
 ```sql
 SELECT * FROM Customers;
+```
