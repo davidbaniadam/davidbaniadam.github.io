@@ -1,4 +1,5 @@
 # Build settings
+theme: minima
 markdown: kramdown
 
 # Permalinks
