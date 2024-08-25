@@ -1,6 +1,5 @@
 
 ---
-layout: default
 title: "Welcome to My SQL Server Blog!"
 ---
 
