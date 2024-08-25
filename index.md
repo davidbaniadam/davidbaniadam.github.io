@@ -1,5 +1,7 @@
+
 ---
 layout: default
+title: Home
 ---
 
 # Welcome to My SQL Server Blog!
