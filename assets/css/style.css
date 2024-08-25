@@ -23,7 +23,7 @@ a:hover {
 }
 
 ul {
-    list-style-type: disc; /* Restores bullet points */
+    list-style-type: disc !important; /* Restores bullet points */
     padding-left: 20px; /* Adds indentation for bullets */
 }
 
