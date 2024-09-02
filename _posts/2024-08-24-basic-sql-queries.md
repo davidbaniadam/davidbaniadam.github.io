@@ -4,7 +4,7 @@ title: "Resource Governor Part 1"
 date: 2024-08-24 10:00:00 +0000
 categories: blog
 permalink: basic-sql-queries.html
-published: false
+published: true
 ---
 
 
