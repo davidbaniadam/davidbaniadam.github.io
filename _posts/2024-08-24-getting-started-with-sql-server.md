@@ -3,7 +3,7 @@ layout: post
 title: "Resource Governor Part 1"
 date: 2024-08-24 10:00:00 +0000
 categories: blog
-permalink: basic-sql-queries.html
+permalink: resource-governor-part-1.html
 published: true
 ---
 
