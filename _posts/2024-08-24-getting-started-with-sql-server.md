@@ -1,6 +1,5 @@
 ---
 layout: post
-title: "Getting Started with SQL Server"
 date: 2024-08-24
 ---
 
