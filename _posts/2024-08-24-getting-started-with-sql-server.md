@@ -1,9 +1,13 @@
 ---
 layout: post
-date: 2024-08-24
+title: "Resource Governor Part 1"
+date: 2024-08-24 10:00:00 +0000
+categories: blog
+permalink: basic-sql-queries.html
+published: true
 ---
 
-# Getting Started with SQL Server
+
 
 Welcome to our introductory guide on SQL Server!
 
