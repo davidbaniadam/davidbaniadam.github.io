@@ -113,5 +113,5 @@ GO
 
 
 
-[^1]: See [Editions and supported features of SQL Server 2022 - SQL Server | Microsoft Learn.](https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2022?view=sql-server-ver16&preserve-view=true#RDBMSSP) 
+[^1]: See https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2022?view=sql-server-ver16&preserve-view=true#RDBMSSP
 [^2]: The description in the example requires CAP_CPU_PERCENT. 
