@@ -29,7 +29,7 @@ The red cross over the icon of Resource Governor means that is is currently disa
 What is a Resource Pool? An example will perhaps help:   
 > **Example for Resource Pool**: All the CPU time on a given server is 100% of the CPU resources, so we can define a (user-defined) Resource Pool that consist of 50% of the CPU time. If a user is put into this Pool, then he cannot consume more that 50% of the CPU time on the server[^2] 
 
-By default all user request end up in the *default pool*. The *internal pool* is for system tasks (e.g. Checkpoint, Lazy Writer) and cannot be modified in any way. The *default pool* cannot be dropped, but it can be altered. If we right click the *default pool* and choose "Properties" a window is opened, where the top part is shown in Figure 2
+By default all user request end up in the *default pool*. The *internal pool* is for system tasks (e.g. Checkpoint, Lazy Writer) and cannot be modified. The *default pool* cannot be dropped, but it can be altered. If we right click the *default pool* and choose "Properties" a window is opened, where the top part is shown in Figure 2
 
 ![SSMS-Resource-Governor](/images/ssms-properties.png)  
 *Figure 2: properties of the default pool*
@@ -68,7 +68,7 @@ MAX_MEMORY_PERCENT = 50
 GO
 ```
 ## Workload Groups and Classification
-The next terms we need to understand are *Workload Groups* and Classification. 
+The next terms we need to understand are *Workload Groups* and Classification. A session is clasified into a Workload Group
 
 To read more about Resource Pools, Workload Groups and Classification see the [documentation](https://learn.microsoft.com/en-us/sql/relational-databases/resource-governor/resource-governor?view=sql-server-ver16#resource-concepts) 
 
