@@ -46,3 +46,20 @@ footer {
     font-size: 0.9em;
     color: #888;
 }
+
+pre, code {
+    background-color: #f4f4f4; /* Light grey background */
+    border: 1px solid #ccc; /* Light grey border */
+    padding: 10px; /* Padding around the text */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+    overflow-x: auto; /* Adds horizontal scrolling if needed */
+}
+
+pre {
+    white-space: pre-wrap; /* Ensures that lines wrap */
+    word-break: break-all; /* Ensures words can break and wrap */
+}
+
+code {
+    display: block; /* Makes code elements display as block */
+}
