@@ -12,6 +12,7 @@ author: "David Baniadam"
 # Table of Contents
 - [Introduction](#introduction)
 - [Resource Governor In SSMS](#resource-governor-in-ssms)
+- [Resource Pools](#resource-pools)
 
 # Introduction
 
