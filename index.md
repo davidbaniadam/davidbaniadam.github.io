@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Welcome to My SQL Server Blog!
+# Welcome to My SQL Server Blog
 
 Collection of articles about SQL Server
 
