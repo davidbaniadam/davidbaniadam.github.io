@@ -5,7 +5,7 @@ title: Home
 
 # Welcome to My SQL Server Blog!
 
-This is a simple blog hosted on GitHub Pages.
+Collection of articles about SQL Server
 
 ## Recent Blog Posts
 
