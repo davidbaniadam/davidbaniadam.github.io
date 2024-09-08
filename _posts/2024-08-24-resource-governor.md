@@ -14,7 +14,10 @@ author: "David Baniadam"
 - [Resource Governor In SSMS](#resource-governor-in-ssms)
 	- [Resource Pools](#resource-pools)  
 	- [Workload Groups and Classification](#workload-groups-and-classification)  
-- [Code Example](#code-example)
+- [Code Example to Limit Resources for Maintenance Jobs](#code-example-to-limit-resources-for-maintenance-jobs)  
+- [Solving Resource Semaphore waits](#solving-resource-semaphore-waits)
+- [Monitoring Resource Usage in Different Pools](#monitoring-resource-usage-in-different-pools)
+- [How to Limit IOPS](#how-to-limit-iops)
 
 # Introduction
 
@@ -116,7 +119,7 @@ In a sense a workload group is an extra layer of complexity
 
 To read more about Resource Pools, Workload Groups and Classification see the [documentation](https://learn.microsoft.com/en-us/sql/relational-databases/resource-governor/resource-governor?view=sql-server-ver16#resource-concepts) 
 
-# Code Example
+# Code Example to Limit Resources for Maintenance Jobs
 A code example will help in understanding how Resource Govornor works. 
 
 ```sql 
@@ -157,7 +160,17 @@ GO
 
 ```
 
+# Solving Resource Semaphore waits  
 
+Comming soon.
+
+# Monitoring Resource Usage in Different Pools  
+
+Comming soon.
+
+# How to Limit IOPS  
+
+Comming soon.
 
 
 
