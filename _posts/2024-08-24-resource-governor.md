@@ -62,7 +62,7 @@ ALTER RESOURCE POOL [default] WITH(
 		CAP_CPU_PERCENT=100, 
 		AFFINITY SCHEDULER = AUTO, 
 		MIN_IOPS_PER_VOLUME=0, 
-		MAX_IOPS_PER_VOLUME=0)
+		MAX_IOPS_PER_VOLUME=0);
 GO
 ```
 We can create a user-defined Resource Pool as e.g.:
@@ -97,7 +97,21 @@ ALTER WORKLOAD GROUP [default]
 GO
 ```
 
+Classification is the process of putting sessions into a workload group and is done by writing a user-defined function in the master database. In the absense of such a function all user sessions are mapped into the default workload group. Some system function that can be used in writing the classifier function are: 
 
+```sql
+SELECT
+ORIGINAL_LOGIN(), 
+APP_NAME(), 
+SUSER_SNAME(), 
+HOST_NAME(), 
+PROGRAM_NAME(), 
+IS_SRVROLEMEMBER('sysadmin'), 
+IS_MEMBER('db_owner'),
+IS_MEMBER('domain\group') as [AD group],
+CONNECTIONPROPERTY('auth_scheme');
+
+```
 In a sense a workload group is an extra layer of complexity 
 
 To read more about Resource Pools, Workload Groups and Classification see the [documentation](https://learn.microsoft.com/en-us/sql/relational-databases/resource-governor/resource-governor?view=sql-server-ver16#resource-concepts) 
@@ -113,9 +127,6 @@ CREATE RESOURCE POOL UD_ResourcePool
 WITH (
       MAX_CPU_PERCENT = 50,
       MAX_MEMORY_PERCENT = 50
-      /*
-      there is also MAX_IOPS_PER_VOLUME = 0
-      */
       );
 GO
  
@@ -123,7 +134,7 @@ CREATE WORKLOAD GROUP UD_WorkloadGroup
 USING UD_ResourcePool;
 GO
  
-CREATE FUNCTION dbo.RG_Classifier()
+CREATE FUNCTION dbo.Classifier()
 RETURNS SYSNAME
 WITH SCHEMABINDING
 AS
@@ -139,6 +150,10 @@ BEGIN
 END;
 GO
 
+-- Register the classifier function with Resource Governor
+ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = dbo.Classifier);
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
 
 ```
 
