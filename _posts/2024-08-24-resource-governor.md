@@ -21,10 +21,10 @@ author: "David Baniadam"
 
 # Introduction
 
-Resource Governor is an Enterprise-only feature[^1] and can help solve some problems, including performance problems. Some examples include: 
+Resource Governor is an Enterprise-only feature[^1] and can help solve some interesting problems, including performance problems. Some examples include: 
 * Limit the amount of resources maintenance jobs (index maintenance and integrity checks) can use to avoid performance problems for databases that need to be available 24/7. 
 * Solving Resource Semaphore waits. 
-* Limit the amount of resources a user can use. 
+* Limit the amount of resources a user/group can use. 
 * Monitoring how many resources different users/departments/apps etc. use. 
 * Testing before downsizing a server.
 
