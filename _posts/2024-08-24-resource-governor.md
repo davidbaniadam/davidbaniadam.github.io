@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Resource Governor"
+title: "Introduction to SQL Server Resource Governor"
 date: 2024-08-24 10:00:00 +0000
 show_date: false
 categories: blog
@@ -14,8 +14,13 @@ author: "David Baniadam"
 Resource Governor is an Enterprise-only feature[^1] and can help solve some problems, including performance problems. Some examples include: 
 * Limit the amount of resources maintenance jobs (index maintenance and integrity checks) can use to avoid performance problems for databases that need to be available 24/7. 
 * Solving Resource Semaphore waits. 
-* On an instance with multiple databases from different departments that have to compete for the resource and when few users use all the computing resources on the server. 
-* Testing before downsizing a server. 
+* Limit the amount of resources a user can use. 
+* Monitoring how many resources different users/departments/apps etc. use. 
+* Testing before downsizing a server.
+
+It can be quite difficult to learn Resource Governor by reading the documentation. This post tries to make understading Resource Governor easier. 
+
+
 
 # Resource Governor in SSMS
 Seeing Resource Governor in SSMS might help with understanding the concepts: 
@@ -23,18 +28,18 @@ Seeing Resource Governor in SSMS might help with understanding the concepts:
 ![SSMS-Resource-Governor](/images/ssms-resource-governor-1.png)  
 *Figure 1: Resource Governor in SSMS*
 
-The red cross over the icon of Resource Governor means that is is currently disabled. But "disabled" only means that the default configurations are being used. As can be seen in Figure 1, Resource Governor consists of Resource Pools and by default there are two "System Resource Pools": The *default pool* and the *internal pool* (note: when we refer to e.g. the default pool we are refering to the default *resource* pool). 
+The red cross over the icon of Resource Governor means that is is currently disabled, but "disabled" only means that the default configurations are being used. As can be seen in Figure 1, Resource Governor consists of Resource Pools and by default there are two "System Resource Pools": The *default pool* and the *internal pool* (note: when we refer to e.g. the default pool we are refering to the default *resource* pool). 
 
 ## Resource Pools
 What is a Resource Pool? An example will perhaps help:   
 > **Example for Resource Pool**: All the CPU time on a given server is 100% of the CPU resources, so we can define a (user-defined) Resource Pool that consist of 50% of the CPU time. If a user is put into this Pool, then he cannot consume more that 50% of the CPU time on the server[^2] 
 
-By default all user request end up in the *default pool*. The *internal pool* is for system tasks (e.g. Checkpoint, Lazy Writer) and cannot be modified. The *default pool* cannot be dropped, but it can be altered. If we right click the *default pool* and choose "Properties" a window is opened, where the top part is shown in Figure 2
+By default all user request end up in the *default pool*. The *internal pool* is for system tasks (e.g. Checkpoint, Lazy Writer) and cannot be modified. The *default pool* cannot be dropped, but it can be altered. If we right click the *default pool* and choose "Properties" a window is opened, see Figure 2
 
 ![SSMS-Resource-Governor](/images/ssms-properties.png)  
 *Figure 2: properties of the default pool*
 
-If we script out the default pool as "ALTER" (see Figure 3) then we see even more details that are not shown in the GUI. 
+The top part of Figure 2 shows the properties of the two system resource pools. If we script out the default pool as "ALTER" (see Figure 3) then we see even more details that are not shown in the GUI. 
 
 ![SSMS-Resource-Governor](/images/ssms-resource-governor-2.png)  
 *Figure 3: script out the default pool*
@@ -68,7 +73,26 @@ MAX_MEMORY_PERCENT = 50
 GO
 ```
 ## Workload Groups and Classification
-The next terms we need to understand are *Workload Groups* and Classification. A session is clasified into a Workload Group
+The next terms we need to understand are *Workload Groups* and *Classification*. A session is clasified into a Workload Group which is then put into a resource pull. The relationship between a Resource Pool and a Workload Group is 1-to-many, i.e. multiple workload groups can be put a resource pool. The workload group has also some settings that are quite important. We can also script out the default workload group (see also the bottom part of Figure 2):
+
+```sql
+USE [master]
+GO
+
+ALTER WORKLOAD GROUP [default] 
+	WITH(	
+		GROUP_MAX_REQUESTS=0, 
+		IMPORTANCE=Medium, 
+		REQUEST_MAX_CPU_TIME_SEC=0, 
+		REQUEST_MAX_MEMORY_GRANT_PERCENT=25, 
+		REQUEST_MEMORY_GRANT_TIMEOUT_SEC=0, 
+		MAX_DOP=0
+		);
+GO
+```
+
+
+In a sense a workload group is an extra layer of complexity 
 
 To read more about Resource Pools, Workload Groups and Classification see the [documentation](https://learn.microsoft.com/en-us/sql/relational-databases/resource-governor/resource-governor?view=sql-server-ver16#resource-concepts) 
 
