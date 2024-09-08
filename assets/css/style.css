@@ -32,6 +32,16 @@ li {
     margin-bottom: 3px;
 }
 
+.toc ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 20px;
+}
+
+.toc li {
+    margin-bottom: 3px; /* Adjust this value as needed */
+}
+
 header {
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
