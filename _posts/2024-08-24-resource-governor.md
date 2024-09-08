@@ -9,6 +9,10 @@ published: true
 author: "David Baniadam"
 ---
 
+# Table of Contents
+- [Introduction](#introduction)
+- [Resource Governor In SSMS](#resource-governor-in-ssms)
+
 # Introduction
 
 Resource Governor is an Enterprise-only feature[^1] and can help solve some problems, including performance problems. Some examples include: 
@@ -21,12 +25,11 @@ Resource Governor is an Enterprise-only feature[^1] and can help solve some prob
 It can be quite difficult to learn Resource Governor by reading the documentation. This post tries to make understading Resource Governor easier. 
 
 
+# Resource Governor In SSMS
+Seeing resource-governor-in-ssms might help with understanding the concepts: 
 
-# Resource Governor in SSMS
-Seeing Resource Governor in SSMS might help with understanding the concepts: 
-
-![SSMS-Resource-Governor](/images/ssms-resource-governor-1.png)  
-*Figure 1: Resource Governor in SSMS*
+![SSMS-Resource-Governor](/images/sims-resource-governor-1.png)  
+*Figure 1: resource-governor-in-ssms*
 
 The red cross over the icon of Resource Governor means that is is currently disabled, but "disabled" only means that the default configurations are being used. As can be seen in Figure 1, Resource Governor consists of Resource Pools and by default there are two "System Resource Pools": The *default pool* and the *internal pool* (note: when we refer to e.g. the default pool we are refering to the default *resource* pool). 
 
