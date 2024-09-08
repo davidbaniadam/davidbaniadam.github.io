@@ -13,7 +13,7 @@ author: "David Baniadam"
 - [Introduction](#introduction)
 - [Resource Governor In SSMS](#resource-governor-in-ssms)
 	- [Resource Pools](#resource-pools)
-   	- [Workload Groups and Classification](#workload-groups-and-classification)
+  	- [Workload Groups and Classification](#workload-groups-and-classification)  
 - [Code Example](#code-example)
 
 # Introduction
