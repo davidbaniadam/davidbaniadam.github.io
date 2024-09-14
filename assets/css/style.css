@@ -4,8 +4,8 @@ body {
     color: #333;
     line-height: 1.6;
     max-width: 900px;
-    margin-right: auto;
-    margin-left: 40px; /* Adjust this value to increase or decrease left margin */
+    margin: 0 auto; /* Keeps the body centered */
+    padding-left: 40px; /* Adds padding on the left */
 }
 
 h1, h2 {
