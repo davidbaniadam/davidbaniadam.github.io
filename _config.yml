@@ -4,3 +4,4 @@ markdown: kramdown
 
 # Permalinks
 permalink: /:year/:month/:day/:title/
+remote_theme: mmistakes/minimal-mistakes
