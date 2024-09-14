@@ -4,7 +4,7 @@ body {
     color: #333;
     line-height: 1.6;
     max-width: 900px;
-    margin: 0 auto 0 20px;
+    margin: 0 auto auto 40px;
 }
 
 h1, h2 {
