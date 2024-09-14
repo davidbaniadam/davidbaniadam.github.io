@@ -4,8 +4,10 @@ body {
     color: #333;
     line-height: 1.6;
     max-width: 900px;
-    margin: 0 auto; /* Keeps the body centered */
-    padding-left: 100px; /* Adds padding on the left */
+    margin-top: 0;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 80px;
 }
 
 h1, h2 {
