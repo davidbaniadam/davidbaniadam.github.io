@@ -7,7 +7,7 @@ body {
     margin-top: 0;
     margin-bottom: auto;
     margin-right: auto;
-    margin-left: 80px;
+    margin-left: 80px !important;
 }
 
 h1, h2 {
