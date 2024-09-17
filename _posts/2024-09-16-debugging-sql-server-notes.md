@@ -47,7 +47,7 @@ bc 0
 lm v
 
 # resume execution: go
-go
+g
 
 # Break
 Alt + Del
