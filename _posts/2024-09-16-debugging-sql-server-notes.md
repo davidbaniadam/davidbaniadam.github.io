@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Debugging Notes"
+title: "Debugging SQL Server Notes"
 date: 2024-08-24 10:00:00 +0000
 show_date: false
 categories: blog
