@@ -26,9 +26,31 @@ Use `DBCC STACKDUMP` to create a stackdump and transfer this file to your comput
 
 # Useful commands
 
-Set location of symbols when working offline:
+
 ```powershell
+# Set location of symbols when working offline
 .sympath C:\Symbols
+
+# Set breakpoint
+bp function_name
+
+# show breakpoints: breakpoint list
+bl
+
+# breakpoint disable with id 0
+db 0
+
+# breakpoint clear with id 0
+bc 0
+
+# list modules verbose
+lm v
+
+# resume execution: go
+go
+
+# Break
+Alt + Del
 ```
 
 
