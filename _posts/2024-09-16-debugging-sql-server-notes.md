@@ -13,11 +13,16 @@ author: "David Baniadam"
 
 
 # Download Symbols
-There are two ways do download symbols for offline use. If you do not have SQL Server installed on your computer with internet access then you can copy the Binn folder to your computer. In the command below the symbols will be downloaded to `C:\Symbols`. 
+There are two ways do download symbols for offline use: Creating a stackdump or using a tool called 
+
+## Use the symchk tool
+If you do not have SQL Server installed on your computer with internet access then you can copy the Binn folder to your computer. In the command below the symbols will be downloaded to `C:\Symbols`. 
 
 ```powersehll
 .\symchk.exe /r C:\sqlservr\Binn\ /s SRV*C:\Symbols*https://msdl.microsoft.com/download/symbols
 ```
+## Create a Stackdump
+Use `DBCC STACKDUMP` to create a stackdump and transfer this file to your computer with internet access. 
 
 # Useful commands
 
