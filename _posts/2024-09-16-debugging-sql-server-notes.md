@@ -56,4 +56,6 @@ Alt + Del
 !uniqstack
 ```
 
+links: https://techcommunity.microsoft.com/t5/sql-server-support-blog/intro-to-debugging-a-memory-dump/ba-p/316925
+
 
