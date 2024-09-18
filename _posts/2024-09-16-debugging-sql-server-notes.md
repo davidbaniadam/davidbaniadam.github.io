@@ -51,6 +51,9 @@ g
 
 # Break
 Alt + Del
+
+# group similar stacks
+!uniqstack
 ```
 
 
