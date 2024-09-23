@@ -31,6 +31,12 @@ Use `DBCC STACKDUMP` to create a stackdump and transfer this file to your comput
 # Set location of symbols when working offline
 .sympath C:\Symbols
 
+# Display the call stack for all threads in the system. ~* means all threads and kv shows the stack with frame memory and related information. 
+~*kv
+
+# dusokat the call stack for current thread. 
+k
+
 # Set breakpoint
 bp function_name
 
