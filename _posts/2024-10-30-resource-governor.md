@@ -1,16 +1,11 @@
 ---
-layout: post
-title: "Introduction to SQL Server Resource Governor"
-date: 2024-08-24 10:00:00 +0000
-show_date: false
+title: "Welcome to Jekyll 2!"
+date: 2019-04-18T15:34:30-05:00
 categories:
   - blog
 tags:
   - Jekyll
   - update
-permalink: resource-governor.html
-published: true
-author: "David Baniadam"
 ---
 
 # Table of Contents
