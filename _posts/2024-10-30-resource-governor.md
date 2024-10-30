@@ -3,7 +3,11 @@ layout: post
 title: "Introduction to SQL Server Resource Governor"
 date: 2024-08-24 10:00:00 +0000
 show_date: false
-categories: blog
+categories:
+  - blog
+tags:
+  - Jekyll
+  - update
 permalink: resource-governor.html
 published: true
 author: "David Baniadam"
