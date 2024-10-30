@@ -1,6 +1,6 @@
 ---
-title: "Welcome to Jekyll 2!"
-date: 2019-04-18T15:34:30-05:00
+title: "Introduction to SQL Server Resource Governor"
+date: 2024-10-30T12:24:30-05:00
 categories:
   - blog
 tags:
