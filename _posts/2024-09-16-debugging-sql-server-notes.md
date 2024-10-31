@@ -1,12 +1,11 @@
 ---
-layout: post
 title: "Debugging SQL Server Notes"
-date: 2024-08-24 10:00:00 +0000
-show_date: false
-categories: blog
-permalink: debugging-sql-server.html
-published: false
-author: "David Baniadam"
+date: 2024-10-29T12:24:30-05:00
+categories:
+  - blog
+tags:
+  - Jekyll
+  - update
 ---
 
 # Useful Resources
