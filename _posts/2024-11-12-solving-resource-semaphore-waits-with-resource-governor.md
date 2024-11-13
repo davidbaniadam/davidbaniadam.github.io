@@ -1,6 +1,7 @@
 ---
 title: "Solving RESOURCE_SEMAPHORE Waits with Resource Governor"
 date: 2024-10-29T12:24:30-05:00
+published: false
 categories:
   - blog
 tags:
@@ -9,15 +10,17 @@ tags:
 
 
 # Solving Resource Semaphore waits  
-The RESOURCE_SEMAPHORE wait type is one of those wait types that can cause performance disasters. A lot of advice on the internet suggests to increase the amount of RAM on a server. The objective of this article is to show that this advice is not always true and it depends and there are multiple potential causes for RESOURCE_SEMAPHORE waits. A simple equation can hopefully shed light on this point:  
+The RESOURCE_SEMAPHORE wait type is one of those wait types that can cause performance disasters and the reason is that SQL Server cannot give the queries the memory they need so that they are able to run. A lot of advice on the internet suggests to increase the amount of RAM on a server. The objective of this article is to show that this advice is not always true and it depends and there are multiple potential causes for RESOURCE_SEMAPHORE waits. A simple equation can hopefully shed light on this point:  
 
 $$
 c = \frac{a}{b}
 $$
 
-How can we increase the value of *c*? The answer is that we can either increase the value of *a* or we can decrease the value of *b*. 
+where $b >0$. How can we increase the value of *c*? The answer is that we can either increase the value of *a* or we can decrease the value of *b*. Similary with RESOURCE_SEMAPHORE waits we need to understand what is causing these waits. 
 
-Similary with RESOURCE_SEMAPHORE waits there are 3 variables one can adjust: 
+
+
+As an example assume $a=128 GB$ and $b=0.25
 
 This example hopefully illustrates that one should try to understand some relationships before blindly following some advice on the internet. 
 
