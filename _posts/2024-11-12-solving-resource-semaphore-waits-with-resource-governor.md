@@ -1,5 +1,5 @@
 ---
-title: "Introduction to SQL Server Resource Governor"
+title: "Solving RESOURCE_SEMAPHORE Waits with Resource Governor"
 date: 2024-10-29T12:24:30-05:00
 categories:
   - blog
