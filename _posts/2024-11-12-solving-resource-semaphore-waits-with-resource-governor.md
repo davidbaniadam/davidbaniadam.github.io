@@ -4,8 +4,7 @@ date: 2024-10-29T12:24:30-05:00
 categories:
   - blog
 tags:
-  - Jekyll
-  - update
+  - Resource Governor
 ---
 
 
